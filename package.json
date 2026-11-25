@@ -1,0 +1,38 @@
+{
+  "name": "ai-todo-task",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Rohit414141/ai-todo-task#readme",
+  "bugs": {
+    "url": "https://github.com/Rohit414141/ai-todo-task/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohit414141/ai-todo-task.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx index.ts",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:generate": "drizzle-kit generate --config=drizzle/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config=drizzle/drizzle.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle/drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config=drizzle/drizzle.config.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
+    "dotenv": "^18.0.10",
+    "drizzle-orm": "^1.0.0-rc.6",
+    "pg": "^8.23.1",
+    "studio": "^0.13.5"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^1.0.0-rc.6",
+    "tsx": "^4.23.15"
+  }
+}
